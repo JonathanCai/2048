@@ -1,0 +1,33 @@
+#logo {
+	margin-top: 60px;
+	width: 400px;
+}
+
+.form-signin {
+	margin-top: 50px;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form-signin-heading {
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+#username {
+	margin-bottom: 20px;
+	height: 30px;
+}
+
+#password {
+	height: 30px
+}
+
+#submit {
+	margin-top: 50px;
+}
+
+input {
+	text-align: center;
+}
