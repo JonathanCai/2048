@@ -2,18 +2,10 @@ package me.wslong.spring2048.service;
 
 import me.wslong.spring2048.web.dto.UserDTO;
 
-import org.springframework.stereotype.Service;
+public interface UserService {
 
-@Service
-public class UserService {
+  UserDTO signin(String username, String password);
 
-  public UserDTO signin(String username, String password) {
-    return null;
-  }
-
-  public UserDTO signup(String username, String password) {
-
-    return null;
-  }
+  UserDTO signup(String username, String password);
 
 }

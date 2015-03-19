@@ -1,4 +1,4 @@
-package me.wslong.spring2048.web.rest;
+package me.wslong.spring2048.web;
 
 import me.wslong.spring2048.web.dto.RestDTO;
 import me.wslong.spring2048.web.dto.UserDTO;

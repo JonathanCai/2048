@@ -1,27 +1,39 @@
-# spring-2048
+# Spring2048
 
 ## Introduction
 
-A spring wrapper of Game 2048, provide the sign in/up and view scores functionalities.
+Simple wrapper with Spring, provides login and register services, and data persistence of 2048 scores, etc.
 
-* Hibernate3
-* Spring4
-* MySQL5
+~~Just for fun~~
 
-## Configuration
+## Requirements
 
-1. Lombok installation
+* Java7+
+* Spring4+
+* Hibernate3.6+
+* Bootstrap3.2+
+* MySQL5+
+* Tomcat7+
+
+## Project Setup
+
+1. Lombok
   * For eclipse
     1. place the lombok.jar together with the eclipse.ini
     2. open the eclipse.ini and add `-javaagent:lombok.jar` at the end of the file
   * For IntellJ
     1. add the lombok plugin
-  * Add the dependency into the pom.xml or gradle
-2. MySQL setup
-  source spring2048.sql
+  * Add the dependency into the pom.xml
+2. MySQL Database
+  * sql> source spring2048.sql
+3. Import maven project
+  * mvn jetty:run for the quick development
+  * mvn package for the output
 
-##
+## Configurations
+
+
 
 ## License
 
-Origin license can be found [HERE](LICENSE/LICENSE.txt).
+Origin license please see [HERE](LICENSE/LICENSE.txt).

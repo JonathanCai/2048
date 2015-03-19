@@ -1,3 +1,14 @@
 .my-container {
 	margin-top: 60px;
 }
+
+.width100percent {
+	width: 100%;
+}
+
+@media ( min-width : 768px) {
+	.width100percent {
+		margin-right: 0;
+		margin-left: 0;
+	}
+}

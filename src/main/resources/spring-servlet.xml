@@ -6,11 +6,6 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:component-scan base-package="me.wslong.spring2048" />
-
-	<!-- The use of <context:component-scan> implicitly enables the functionality of <context:annotation-config>. There is usually 
-		no need to include the <context:annotation-config> element when using <context:component-scan>. -->
-
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
 			<value>/WEB-INF/views/</value>

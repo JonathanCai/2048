@@ -1,8 +1,11 @@
 package me.wslong.spring2048.dao;
 
-import org.springframework.stereotype.Repository;
+import me.wslong.spring2048.entity.UserEntity;
 
-@Repository
-public class UserDao {
+public interface UserDao {
+
+  UserEntity createUser(UserEntity user);
+
+  UserEntity getUserByUsernameByPassword(String username, String password);
 
 }
