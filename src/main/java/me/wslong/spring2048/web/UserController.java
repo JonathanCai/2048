@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping(value = "/user")
-public class User {
+public class UserController {
 
   @Autowired
   private UserService userService;
@@ -22,6 +22,8 @@ public class User {
       @RequestParam(defaultValue = "", value = "username") String username, //
       @RequestParam(defaultValue = "", value = "password") String password, //
       HttpSession session) {
+
+    userService.signin(username, password);
 
     session.setAttribute("username", username);
     return "redirect:/play2048";

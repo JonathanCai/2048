@@ -1,14 +1,20 @@
-package me.wslong.spring2048;
+package me.wslong.spring2048.web.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * The REST wrapper JSON output
+ * 
+ * @author Shallong
+ */
 @Data
 @RequiredArgsConstructor
 @AllArgsConstructor
-public class RestBean {
+public class RestDTO {
+
   @NonNull
   private Boolean success;
 
@@ -16,4 +22,5 @@ public class RestBean {
 
   @NonNull
   private Object result;
+
 }

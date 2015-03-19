@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+	<!-- <bean id="userDao" class="com.campuspy.rest.dao.impl.UserDaoImpl">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+	<bean id="videoDao" class="com.campuspy.rest.dao.impl.VideoDaoImpl">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+	<bean id="videoContentDao" class="com.campuspy.rest.dao.impl.VideoContentDaoImpl">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+	<bean id="employerDao" class="com.campuspy.rest.dao.impl.EmployerDaoImpl">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+	<bean id="companyDao" class="com.campuspy.rest.dao.impl.CompanyDaoImpl">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+	<bean id="companyBackupDao" class="com.campuspy.rest.dao.impl.CompanyBackupDaoImpl">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+	<bean id="jobDao" class="com.campuspy.rest.dao.impl.JobDaoImpl">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean> -->
+
+</beans>

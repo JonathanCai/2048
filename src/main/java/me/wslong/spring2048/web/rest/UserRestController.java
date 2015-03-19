@@ -1,7 +1,7 @@
-package me.wslong.spring2048.rest;
+package me.wslong.spring2048.web.rest;
 
-import me.wslong.spring2048.RestBean;
-import me.wslong.spring2048.bean.UserBean;
+import me.wslong.spring2048.web.dto.RestDTO;
+import me.wslong.spring2048.web.dto.UserDTO;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/rest/user")
-public class UserRest {
+public class UserRestController {
 
   @RequestMapping(value = "/get", method = RequestMethod.POST)
-  public RestBean get() {
-    UserBean user = new UserBean();
-    return new RestBean(true, user);
+  public RestDTO get() {
+    UserDTO user = new UserDTO();
+    return new RestDTO(true, user);
   }
 
 }

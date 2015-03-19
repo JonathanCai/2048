@@ -1,11 +1,11 @@
-package me.wslong.spring2048.bean;
+package me.wslong.spring2048.web.dto;
 
 import java.util.Date;
 
 import lombok.Data;
 
 @Data
-public class UserBean {
+public class UserDTO {
 
   private String uid;
 
