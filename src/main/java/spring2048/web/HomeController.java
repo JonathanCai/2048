@@ -1,4 +1,4 @@
-package me.wslong.spring2048.web;
+package spring2048.web;
 
 import javax.servlet.http.HttpSession;
 

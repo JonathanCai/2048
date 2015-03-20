@@ -1,4 +1,4 @@
-package me.wslong.spring2048.web.dto;
+package spring2048.web.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

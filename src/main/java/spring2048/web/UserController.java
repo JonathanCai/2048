@@ -1,15 +1,15 @@
-package me.wslong.spring2048.web;
+package spring2048.web;
 
 import javax.servlet.http.HttpSession;
-
-import me.wslong.spring2048.service.UserService;
-import me.wslong.spring2048.web.dto.UserDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import spring2048.service.UserService;
+import spring2048.web.dto.UserDTO;
 
 @Controller
 @RequestMapping(value = "/user")

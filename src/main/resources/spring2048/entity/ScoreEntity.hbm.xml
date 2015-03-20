@@ -3,7 +3,7 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="me.wslong.spring2048.entity">
+<hibernate-mapping package="spring2048.entity">
 	<class name="ScoreEntity" table="score">
 		<id name="score_id" column="score_id">
 			<generator class="native" />

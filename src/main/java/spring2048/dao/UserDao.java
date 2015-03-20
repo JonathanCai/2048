@@ -1,6 +1,6 @@
-package me.wslong.spring2048.dao;
+package spring2048.dao;
 
-import me.wslong.spring2048.entity.UserEntity;
+import spring2048.entity.UserEntity;
 
 public interface UserDao {
 

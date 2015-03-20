@@ -1,15 +1,15 @@
-package me.wslong.spring2048.service.impl;
-
-import me.wslong.spring2048.dao.UserDao;
-import me.wslong.spring2048.entity.UserEntity;
-import me.wslong.spring2048.service.UserService;
-import me.wslong.spring2048.web.dto.UserDTO;
+package spring2048.service.impl;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+
+import spring2048.dao.UserDao;
+import spring2048.entity.UserEntity;
+import spring2048.service.UserService;
+import spring2048.web.dto.UserDTO;
 
 @Transactional(readOnly = true)
 @Service

@@ -1,6 +1,6 @@
-package me.wslong.spring2048.service;
+package spring2048.service;
 
-import me.wslong.spring2048.web.dto.UserDTO;
+import spring2048.web.dto.UserDTO;
 
 public interface UserService {
 

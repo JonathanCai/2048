@@ -11,7 +11,7 @@
     http://www.springframework.org/schema/tx
     http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<context:component-scan base-package="me.wslong.spring2048" />
+	<context:component-scan base-package="spring2048" />
 
 	<mvc:annotation-driven />
 	<mvc:default-servlet-handler />

@@ -1,4 +1,4 @@
-package me.wslong.spring2048.entity;
+package spring2048.entity;
 
 import java.io.Serializable;
 import java.util.Date;

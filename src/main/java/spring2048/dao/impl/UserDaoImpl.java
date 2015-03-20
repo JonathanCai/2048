@@ -1,13 +1,13 @@
-package me.wslong.spring2048.dao.impl;
+package spring2048.dao.impl;
 
 import java.util.List;
-
-import me.wslong.spring2048.dao.UserDao;
-import me.wslong.spring2048.entity.UserEntity;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import spring2048.dao.UserDao;
+import spring2048.entity.UserEntity;
 
 @Repository
 public class UserDaoImpl implements UserDao {
