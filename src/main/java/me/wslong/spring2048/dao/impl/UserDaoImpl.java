@@ -1,5 +1,7 @@
 package me.wslong.spring2048.dao.impl;
 
+import java.util.List;
+
 import me.wslong.spring2048.dao.UserDao;
 import me.wslong.spring2048.entity.UserEntity;
 
@@ -15,11 +17,38 @@ public class UserDaoImpl implements UserDao {
 
   @Override
   public UserEntity createUser(UserEntity user) {
+    this.sessionFactory
+        .getCurrentSession()
+        .persist(user);
+    return user;
+  }
+
+  @Override
+  public UserEntity retrieveUserByUsername(String username) {
+    @SuppressWarnings("unchecked")
+    List<UserEntity> userList = this.sessionFactory
+        .getCurrentSession()
+        .createQuery("from UserEntity u where u.username=?")
+        .setParameter(0, username)
+        .list();
+    if (null != userList && userList.size() > 0) {
+      return userList.get(0);
+    }
     return null;
   }
 
   @Override
-  public UserEntity getUserByUsernameByPassword(String username, String password) {
+  public UserEntity retrieveUserByUsernameByPassword(String username, String password) {
+    @SuppressWarnings("unchecked")
+    List<UserEntity> userList = this.sessionFactory
+        .getCurrentSession()
+        .createQuery("from UserEntity u where u.username=? and u.password=?")
+        .setParameter(0, username)
+        .setParameter(1, password)
+        .list();
+    if (null != userList && userList.size() > 0) {
+      return userList.get(0);
+    }
     return null;
   }
 

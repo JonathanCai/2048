@@ -3,6 +3,7 @@ package me.wslong.spring2048.web;
 import javax.servlet.http.HttpSession;
 
 import me.wslong.spring2048.service.UserService;
+import me.wslong.spring2048.web.dto.UserDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,16 +24,23 @@ public class UserController {
       @RequestParam(defaultValue = "", value = "password") String password, //
       HttpSession session) {
 
-    userService.signin(username, password);
+    UserDTO userDTO = userService.signin(username, password);
+    if (userDTO != null) {
+      session.setAttribute("userDTO", userDTO);
+      return "redirect:/play2048";
+    }
 
-    session.setAttribute("username", username);
-    return "redirect:/play2048";
+    return "redirect:/signin";
   }
 
   @RequestMapping(value = "/signup", method = RequestMethod.POST)
   public String signup( //
       @RequestParam(defaultValue = "", value = "username") String username, //
       @RequestParam(defaultValue = "", value = "password") String password) {
+
+    UserDTO userDTO = userService.signup(username, password);
+    System.out.println(userDTO.getUid());
+    System.out.println(userDTO.getUsername());
 
     return "redirect:/play2048";
   }

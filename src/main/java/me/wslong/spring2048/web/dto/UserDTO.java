@@ -7,7 +7,9 @@ import lombok.Data;
 @Data
 public class UserDTO {
 
-  private String uid;
+  private Long uid;
+
+  private String username;
 
   private Long rank;
 

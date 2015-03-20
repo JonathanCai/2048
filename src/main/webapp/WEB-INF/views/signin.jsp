@@ -33,10 +33,11 @@
 					</label>
 				</div>
 				<button class="btn btn-success btn-block" type="submit" id="submit">Sign&nbsp;&nbsp;&nbsp;&nbsp;In</button>
+				<a href="/signup">Register in 5 seconds</a>
 			</form>
 		</div>
 		<footer class="center">
-			<section id="copyright">Copyright (c) Shallong</section>
+			<section id="copyright">Create by Shallong</section>
 		</footer>
 	</div>
 

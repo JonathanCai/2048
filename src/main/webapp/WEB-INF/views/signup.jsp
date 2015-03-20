@@ -24,15 +24,16 @@
 			</div>
 		</header>
 		<div class="container-fluid center">
-			<form class="form-signin" action="/user/signin" method="post">
+			<form class="form-signin" action="/user/signup" method="post">
 				<h3 class="form-signin-heading">Register!</h3>
 				<input type="text" id="username" name="username" class="form-control" placeholder="Username" required="required" autofocus="autofocus"></input>
 				<input type="password" id="password" name="password" class="form-control" placeholder="Password" required="required"></input>
 				<button class="btn btn-success btn-block" type="submit" id="submit">Sign&nbsp;&nbsp;&nbsp;&nbsp;Up</button>
+				<a href="/signin">Login directly</a>
 			</form>
 		</div>
 		<footer class="center">
-			<section id="copyright">Copyright (c) Shallong</section>
+			<section id="copyright">Create by Shallong</section>
 		</footer>
 	</div>
 
