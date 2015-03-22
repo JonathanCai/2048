@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import spring2048.web.dto.UserDTO;
+
 @Controller
 public class HomeController {
 
@@ -26,7 +28,8 @@ public class HomeController {
 
   @RequestMapping("/play2048")
   String play2048(HttpSession session, Model model) {
-    model.addAttribute("username", session.getAttribute("username"));
+    UserDTO userDTO = (UserDTO) session.getAttribute("userDTO");
+    model.addAttribute("username", userDTO.getUsername());
     return "play2048";
   }
 
