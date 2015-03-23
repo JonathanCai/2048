@@ -13,17 +13,7 @@ public class HomeController {
 
   @RequestMapping("/")
   String home() {
-    return "redirect:/signin";
-  }
-
-  @RequestMapping("/signin")
-  String signin() {
-    return "signin";
-  }
-
-  @RequestMapping("/signup")
-  String signup() {
-    return "signup";
+    return "redirect:/user/signin";
   }
 
   @RequestMapping("/play2048")

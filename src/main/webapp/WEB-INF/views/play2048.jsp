@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -25,7 +25,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
       <p class="navbar-text width100percent">
-        <span class="navbar-left">Hello! <c:out value="username">Stranger</c:out>!</span><span class="pull-right"><a href="#" class="navbar-link">High-scores Center</a></span>
+        <span class="navbar-left">Hello! <c:out value="${username }">Stranger</c:out></span><span class="pull-right"><a href="#" class="navbar-link">High-scores Center</a></span>
       </p>
 		</div>
 	</nav>

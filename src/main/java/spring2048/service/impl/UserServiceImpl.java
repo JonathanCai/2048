@@ -15,9 +15,13 @@ import spring2048.web.dto.UserDTO;
 @Service
 public class UserServiceImpl implements UserService {
 
+  // public static void main(String[] args) {
+  // System.out.println(DigestUtils.md5Hex("Test").substring(0, 20));
+  // }
+
   @Autowired
   private UserDao userDao;
-  
+
   @Override
   public UserDTO signin(String username, String password) {
     UserDTO userDTO = null;
@@ -48,6 +52,12 @@ public class UserServiceImpl implements UserService {
       userDTO.setUsername(user.getUsername());
     }
     return userDTO;
+  }
+
+  @Override
+  public Boolean checkUsernameUnique(String username) {
+    UserEntity checking = userDao.retrieveUserByUsername(username);
+    return checking == null;
   }
 
 }

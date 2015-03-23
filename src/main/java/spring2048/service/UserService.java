@@ -7,5 +7,7 @@ public interface UserService {
   UserDTO signin(String username, String password);
 
   UserDTO signup(String username, String password);
+  
+  Boolean checkUsernameUnique(String username);
 
 }

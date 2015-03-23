@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,11 +19,26 @@ public class UserController {
   @Autowired
   private UserService userService;
 
+  @RequestMapping(value = "/")
+  String root() {
+    return "redirect:/user/signin";
+  };
+
+  @RequestMapping(value = "/signin", method = RequestMethod.GET)
+  String signin() {
+    return "signin";
+  }
+
+  @RequestMapping(value = "/signup", method = RequestMethod.GET)
+  String signup() {
+    return "signup";
+  }
+
   @RequestMapping(value = "/signin", method = RequestMethod.POST)
   public String signin( //
       @RequestParam(defaultValue = "", value = "username") String username, //
       @RequestParam(defaultValue = "", value = "password") String password, //
-      HttpSession session) {
+      HttpSession session, Model model) {
 
     UserDTO userDTO = userService.signin(username, password);
     if (userDTO != null) {
@@ -30,19 +46,24 @@ public class UserController {
       return "redirect:/play2048";
     }
 
-    return "redirect:/signin";
+    model.addAttribute("error", "Username or Password is incorrect!");
+    return "signin";
   }
 
   @RequestMapping(value = "/signup", method = RequestMethod.POST)
   public String signup( //
       @RequestParam(defaultValue = "", value = "username") String username, //
-      @RequestParam(defaultValue = "", value = "password") String password) {
+      @RequestParam(defaultValue = "", value = "password") String password, //
+      HttpSession session, Model model) {
 
-    UserDTO userDTO = userService.signup(username, password);
-    System.out.println(userDTO.getUid());
-    System.out.println(userDTO.getUsername());
+    if (userService.checkUsernameUnique(username)) {
+      UserDTO userDTO = userService.signup(username, password);
+      session.setAttribute("userDTO", userDTO);
+      return "redirect:/play2048";
+    }
 
-    return "redirect:/play2048";
+    model.addAttribute("error", "Username '" + username + "' has been registered!");
+    return "signup";
   }
 
 }

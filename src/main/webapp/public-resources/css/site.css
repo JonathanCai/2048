@@ -34,3 +34,7 @@ footer {
 .border-down {
 	border-bottom: 1px solid black;
 }
+
+#errorMessage {
+	margin-top: 20px;
+}

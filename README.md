@@ -7,17 +7,17 @@ Basic wrapper with Spring, provides login and register services, and data persis
 ## Requirements
 
 * Java7+
-* Spring4+: spring3 is suitable
+* Spring3+
 * Hibernate3.6+
 * Bootstrap3.2+
 * MySQL5+
+* HSQL1.8+
 * Tomcat7+
 
 ## Quick Run
 
-1. Download the war file
-  * `mvn jetty:run` and open the http://localhost:8585
-  * Configure to a Tomcat
+* Download the project and run `mvn jetty:run` and open the http://localhost:8555
+* Download the war and deploy to a local Tomcat and open the configured host
 
 ## Project Setup
 
@@ -28,11 +28,9 @@ Basic wrapper with Spring, provides login and register services, and data persis
   * For IntellJ
     1. add the lombok plugin
   * Add the dependency into the pom.xml
-2. MySQL Database
-  * sql> source mysql-spring2048.sql
-3. Import maven project
+2. Import as a maven project
   * mvn jetty:run for the quick development
-  * mvn package for the output
+  * mvn package for the war output
 
 ## Extension
 

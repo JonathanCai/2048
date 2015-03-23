@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -21,7 +22,7 @@
 	<div class="common-wrapper">
 		<header class="border-down">
 			<div class="container-fluid center">
-				<a title="Spring2048" href="/"><img id="logo" alt="logo" src="/public-resources/image/logo.png"></img></a>
+				<a title="Spring2048" href="/"><img class="img-responsive" id="logo" alt="logo" src="/public-resources/image/logo.png"></img></a>
 			</div>
 		</header>
 		<div class="container-fluid center">
@@ -30,7 +31,10 @@
 				<input type="text" id="username" name="username" class="form-control" placeholder="Username" required="required" autofocus="autofocus"></input>
 				<input type="password" id="password" name="password" class="form-control" placeholder="Password" required="required"></input>
 				<button class="btn btn-success btn-block" type="submit" id="submit">Sign&nbsp;&nbsp;&nbsp;&nbsp;Up</button>
-				<a href="/signin">Login directly</a>
+				<a href="/user/signin">Login directly</a>
+				<c:if test="${error != null }">
+				  <div class="alert alert-danger" id="errorMessage" role="alert">${error }</div>
+				</c:if>
 			</form>
 		</div>
 		<footer class="center">
