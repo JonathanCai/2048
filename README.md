@@ -1,4 +1,4 @@
-# Spring2048
+![Spring2048](https://raw.githubusercontent.com/Shallong/2048/master/src/main/webapp/public-resources/image/logo.png)
 
 ## Introduction
 
