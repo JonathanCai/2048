@@ -4,13 +4,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>spring2048</groupId>
-	<artifactId>spring2048</artifactId>
+	<groupId>Spring2048</groupId>
+	<artifactId>Spring2048</artifactId>
 	<version>1.0.0</version>
 	<packaging>war</packaging>
 
-	<name>spring2048</name>
-	<description>spring2048 for ..what?</description>
+	<name>Spring2048</name>
+	<description>Spring2048</description>
 
 	<!-- Add the lombok repository here to be able to download the lombok dependency -->
 	<repositories>
@@ -183,7 +183,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>spring2048</finalName>
+		<finalName>Spring2048</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
@@ -213,7 +213,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
-					<warName>spring2048</warName>
+					<warName>Spring2048</warName>
 					<filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
 					<outputDirectory>${webappsDirectory}</outputDirectory>
 				</configuration>

@@ -2,12 +2,14 @@
 
 ## Introduction
 
-Basic wrapper with Spring, provides login and register services, and data persistence of 2048 scores, etc.
+A place to learn Spring+2048!
+
+Which provides basic login and register processes, score viewing process.
 
 ## Requirements
 
 * Java7+
-* Spring3+
+* Spring4+
 * Hibernate3.6+
 * Bootstrap3.2+
 * MySQL5+
@@ -16,8 +18,8 @@ Basic wrapper with Spring, provides login and register services, and data persis
 
 ## Quick Run
 
-* Download the project and run `mvn jetty:run` and open the http://localhost:8555
-* Download the war and deploy to a local Tomcat and open the configured host
+* Download the project and run `mvn jetty:run` and open the `http://localhost:8555`
+* Package to the war and deploy to a local Tomcat and open the configured host
 
 ## Project Setup
 
@@ -29,8 +31,8 @@ Basic wrapper with Spring, provides login and register services, and data persis
     1. add the lombok plugin
   * Add the dependency into the pom.xml
 2. Import as a maven project
-  * mvn jetty:run for the quick development
-  * mvn package for the war output
+  * `mvn jetty:run` for the quick development
+  * `mvn package` for the war output
 
 ## Extension
 
