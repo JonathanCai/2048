@@ -1,7 +1,2 @@
-$(document).ready(function(){
-  
+$(document).ready(function() {
 });
-
-function triggerScoreDashboard(e) {
-  console.info(e);
-};

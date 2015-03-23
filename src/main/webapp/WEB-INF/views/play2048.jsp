@@ -4,6 +4,7 @@
 <html lang="zh-cn">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Play 2048!</title>
 
   <link href="/public-resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -25,7 +26,10 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
       <p class="navbar-text width100percent">
-        <span class="navbar-left">Hello! <c:out value="${username }">Stranger</c:out></span><span class="pull-right"><a href="javascript:triggerScoreDashboard" class="navbar-link">Open Score DashBoard</a></span>
+        <span class="navbar-left">Hello! <c:out value="${username }">Stranger</c:out></span>
+        <span class="pull-right">
+          <a href="/score/list" class="navbar-link">Score DashBoard</a>
+        </span>
       </p>
 		</div>
 	</nav>

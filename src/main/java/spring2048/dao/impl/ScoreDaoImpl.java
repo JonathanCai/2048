@@ -28,7 +28,7 @@ public class ScoreDaoImpl implements ScoreDao {
     @SuppressWarnings("unchecked")
     List<ScoreEntity> scoreList = this.sessionFactory
         .getCurrentSession()
-        .createQuery("from ScoreEntity s where s.username = ?")
+        .createQuery("from ScoreEntity s where s.username = ? order by s.scoring desc")
         .setParameter(0, username)
         .list();
     if (null != scoreList && scoreList.size() > 0) {
@@ -42,7 +42,7 @@ public class ScoreDaoImpl implements ScoreDao {
     @SuppressWarnings("unchecked")
     List<ScoreEntity> scoreList = this.sessionFactory
         .getCurrentSession()
-        .createQuery("from ScoreEntity s order by s.score_date desc")
+        .createQuery("from ScoreEntity s order by s.scoring desc")
         .list();
     if (null != scoreList && scoreList.size() > 0) {
       return scoreList;

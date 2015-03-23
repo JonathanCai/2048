@@ -19,6 +19,9 @@ public class HomeController {
   @RequestMapping("/play2048")
   String play2048(HttpSession session, Model model) {
     UserScoreDTO userDTO = (UserScoreDTO) session.getAttribute("session_user");
+    if (userDTO == null) {
+      return "redirect:/user/signin";
+    }
     model.addAttribute("username", userDTO.getUsername());
     return "play2048";
   }
