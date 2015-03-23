@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import spring2048.dao.UserDao;
 import spring2048.entity.UserEntity;
 import spring2048.service.UserService;
-import spring2048.web.dto.UserDTO;
+import spring2048.web.dto.UserScoreDTO;
 
 @Transactional(readOnly = true)
 @Service
@@ -23,14 +23,14 @@ public class UserServiceImpl implements UserService {
   private UserDao userDao;
 
   @Override
-  public UserDTO signin(String username, String password) {
-    UserDTO userDTO = null;
+  public UserScoreDTO signin(String username, String password) {
+    UserScoreDTO userDTO = null;
     UserEntity checking = userDao.retrieveUserByUsername(username);
     if (checking != null) {
       UserEntity existing = userDao.retrieveUserByUsernameByPassword(username,
           DigestUtils.md5Hex(password).substring(0, 20));
       if (existing != null) {
-        userDTO = new UserDTO();
+        userDTO = new UserScoreDTO();
         userDTO.setUid(existing.getUser_id());
         userDTO.setUsername(username);
       }
@@ -40,14 +40,14 @@ public class UserServiceImpl implements UserService {
 
   @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
   @Override
-  public UserDTO signup(String username, String password) {
-    UserDTO userDTO = null;
+  public UserScoreDTO signup(String username, String password) {
+    UserScoreDTO userDTO = null;
     UserEntity user = new UserEntity();
     user.setUsername(username);
     user.setPassword(DigestUtils.md5Hex(password).substring(0, 20));
     userDao.createUser(user);
     if (user.getUser_id() != null && user.getUser_id() > 0) {
-      userDTO = new UserDTO();
+      userDTO = new UserScoreDTO();
       userDTO.setUid(user.getUser_id());
       userDTO.setUsername(user.getUsername());
     }

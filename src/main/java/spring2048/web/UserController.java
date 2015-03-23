@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import spring2048.service.UserService;
-import spring2048.web.dto.UserDTO;
+import spring2048.web.dto.UserScoreDTO;
 
 @Controller
 @RequestMapping(value = "/user")
@@ -40,9 +40,9 @@ public class UserController {
       @RequestParam(defaultValue = "", value = "password") String password, //
       HttpSession session, Model model) {
 
-    UserDTO userDTO = userService.signin(username, password);
-    if (userDTO != null) {
-      session.setAttribute("userDTO", userDTO);
+    UserScoreDTO userScoreDTO = userService.signin(username, password);
+    if (userScoreDTO != null) {
+      session.setAttribute("session_user", userScoreDTO);
       return "redirect:/play2048";
     }
 
@@ -57,8 +57,8 @@ public class UserController {
       HttpSession session, Model model) {
 
     if (userService.checkUsernameUnique(username)) {
-      UserDTO userDTO = userService.signup(username, password);
-      session.setAttribute("userDTO", userDTO);
+      UserScoreDTO userScoreDTO = userService.signup(username, password);
+      session.setAttribute("session_user", userScoreDTO);
       return "redirect:/play2048";
     }
 

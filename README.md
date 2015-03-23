@@ -34,9 +34,10 @@ Basic wrapper with Spring, provides login and register services, and data persis
 
 ## Extension
 
-1. How to configure a verification code in the sign in/sign up screen to avoid robot registrations?
-2. How to switch to the persistent DB instead of memory DB?
-3. How to enable session management when e.g. session is timeout but game is not over
+1. How to configure a verification code in the sign in/sign up screen to avoid robot registrations.
+2. How to switch to the persistent DB instead of memory DB.
+3. How to enable session management when e.g. session is timeout but game is not over.
+4. How to implement pagination on list score section.
 
 ## License
 

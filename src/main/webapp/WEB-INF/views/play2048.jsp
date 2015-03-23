@@ -25,7 +25,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
       <p class="navbar-text width100percent">
-        <span class="navbar-left">Hello! <c:out value="${username }">Stranger</c:out></span><span class="pull-right"><a href="#" class="navbar-link">High-scores Center</a></span>
+        <span class="navbar-left">Hello! <c:out value="${username }">Stranger</c:out></span><span class="pull-right"><a href="javascript:triggerScoreDashboard" class="navbar-link">Open Score DashBoard</a></span>
       </p>
 		</div>
 	</nav>
@@ -102,5 +102,6 @@
   <script src="/public-resources/js/local_storage_manager.js"></script>
   <script src="/public-resources/js/game_manager.js"></script>
   <script src="/public-resources/js/application.js"></script>
+  <script src="/public-resources/js/play2048.js"></script>
 </body>
 </html>

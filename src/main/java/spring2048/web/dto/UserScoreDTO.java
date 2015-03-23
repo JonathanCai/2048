@@ -2,16 +2,18 @@ package spring2048.web.dto;
 
 import java.util.Date;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-public class UserDTO {
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserScoreDTO {
 
   private Long uid;
 
   private String username;
-
-  private Long rank;
 
   private Long score;
 
