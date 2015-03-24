@@ -66,4 +66,12 @@ public class UserController {
     return "signup";
   }
 
+  @RequestMapping(value = "/signout", method = RequestMethod.GET)
+  public String signout(HttpSession session) {
+
+    session.removeAttribute("session_user");
+
+    return "signin";
+  }
+
 }

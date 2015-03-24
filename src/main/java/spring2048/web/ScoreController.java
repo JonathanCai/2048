@@ -45,12 +45,12 @@ public class ScoreController {
   @ResponseBody
   @RequestMapping(value = "/upload", method = RequestMethod.POST, produces = { "application/json" })
   public RestDTO uploadScoreREST(HttpSession session, //
-      @RequestParam(value = "username", defaultValue = "") String username, //
       @RequestParam(value = "score", defaultValue = "") String score) {
 
     UserScoreDTO sessionUser = (UserScoreDTO) session.getAttribute("session_user");
-    if (sessionUser != null && sessionUser.getUsername().equals(username)) {
-      Boolean uploadScoreResult = scoreService.uploadMyScore(Long.valueOf(score), new Date(), username);
+    if (sessionUser != null) {
+      Boolean uploadScoreResult = scoreService
+          .uploadMyScore(Long.valueOf(score), new Date(), sessionUser.getUsername());
       return new RestDTO(uploadScoreResult, uploadScoreResult ? "" : "ERR_UPLOAD_1", "");
     } else {
       return new RestDTO(false, "ERR_UPLOAD_2", "");

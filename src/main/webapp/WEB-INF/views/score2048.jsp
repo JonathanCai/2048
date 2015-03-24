@@ -18,7 +18,6 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <p class="navbar-text width100percent">
-        <span class="navbar-left">Hello! <c:out value="${username }">Stranger</c:out></span>
         <span class="pull-right">
           <a href="/play2048" class="navbar-link">Back to Play</a>
         </span>
@@ -29,7 +28,7 @@
     <p>
       <c:choose>
         <c:when test="${myScore != null }">
-          Your Highest Score is <strong>${myScore.score }</strong>, happened on <strong>${myScore.date }</strong>.
+          Your Highest Score is <strong>${myScore.score }</strong><br>Happened on <strong>${myScore.date }</strong>.
         </c:when>
         <c:otherwise>
           You haven't played yet, try to <a href="/play2048">PLAY</a> right now!
