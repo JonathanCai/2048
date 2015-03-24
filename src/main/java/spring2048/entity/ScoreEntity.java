@@ -11,6 +11,12 @@ import javax.persistence.Id;
 
 import lombok.Data;
 
+/**
+ * Score Entity
+ * 
+ * @author Shallong
+ *
+ */
 @SuppressWarnings("serial")
 @Entity(name = "score")
 @Data

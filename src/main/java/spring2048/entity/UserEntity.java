@@ -10,6 +10,12 @@ import javax.persistence.Id;
 
 import lombok.Data;
 
+/**
+ * User Entity
+ * 
+ * @author Shallong
+ *
+ */
 @SuppressWarnings("serial")
 @Entity(name = "user")
 @Data

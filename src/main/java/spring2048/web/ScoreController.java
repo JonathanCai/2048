@@ -17,6 +17,12 @@ import spring2048.service.ScoreService;
 import spring2048.web.dto.RestDTO;
 import spring2048.web.dto.UserScoreDTO;
 
+/**
+ * Score controller for the score-related logic
+ * 
+ * @author Shallong
+ *
+ */
 @Controller
 @RequestMapping(value = "/score")
 public class ScoreController {
@@ -24,6 +30,13 @@ public class ScoreController {
   @Autowired
   private ScoreService scoreService;
 
+  /**
+   * List the scores
+   * 
+   * @param session
+   * @param model
+   * @return Game view
+   */
   @RequestMapping(value = "/list", method = RequestMethod.GET)
   public String publicScore(HttpSession session, Model model) {
 
@@ -42,6 +55,15 @@ public class ScoreController {
 
   }
 
+  /**
+   * REST method which will produce the JSON output eventually
+   * 
+   * Upload a new score into the system, the username is extracted from the current session directly
+   * 
+   * @param session
+   * @param score
+   * @return RestDTO in JSON format
+   */
   @ResponseBody
   @RequestMapping(value = "/upload", method = RequestMethod.POST, produces = { "application/json" })
   public RestDTO uploadScoreREST(HttpSession session, //

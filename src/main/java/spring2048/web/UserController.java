@@ -12,6 +12,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import spring2048.service.UserService;
 import spring2048.web.dto.UserScoreDTO;
 
+/**
+ * User controller for user-related logic
+ * 
+ * @author Shallong
+ *
+ */
 @Controller
 @RequestMapping(value = "/user")
 public class UserController {

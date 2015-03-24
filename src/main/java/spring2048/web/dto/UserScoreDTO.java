@@ -6,6 +6,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * User data transfer object
+ * 
+ * Actually, VO is more meaningful
+ * 
+ * @author Shallong
+ *
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
