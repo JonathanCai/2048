@@ -5,11 +5,6 @@ import lombok.Data;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-/**
- * The REST wrapper JSON output
- * 
- * @author Shallong
- */
 @Data
 @RequiredArgsConstructor
 @AllArgsConstructor
