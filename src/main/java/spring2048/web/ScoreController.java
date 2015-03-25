@@ -56,6 +56,31 @@ public class ScoreController {
   }
 
   /**
+   * REST method which will get the highest score of a login user
+   * 
+   * @param session
+   * @param model
+   * @return
+   */
+  @ResponseBody
+  @RequestMapping(value = "/getHighest", method = RequestMethod.GET)
+  public RestDTO getHighestScore(HttpSession session, Model model) {
+
+    UserScoreDTO sessionUser = (UserScoreDTO) session.getAttribute("session_user");
+    if (sessionUser == null) {
+      return new RestDTO(false, "ERR_GET_HIGHEST_1", "");
+    }
+
+    UserScoreDTO myScore = scoreService.viewMyselfScore(sessionUser.getUsername());
+    if (myScore != null) {
+      return new RestDTO(true, "", myScore);
+    } else {
+      return new RestDTO(false, "ERR_GET_HIGHEST_2", "");
+    }
+
+  }
+
+  /**
    * REST method which will produce the JSON output eventually
    * 
    * Upload a new score into the system, the username is extracted from the current session directly

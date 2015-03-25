@@ -12,13 +12,34 @@ function uploadScore(score) {
     },
     success : function(data) {
       if (data) {
-        if (data.success == true) {
+        if (data.success) {
           console.info("upload success");
         } else {
-          console.info("upload failure with code = " + data.errorMessage);
+          console.warn("upload failure with code = " + data.errorMessage);
         }
       } else {
-        console.error("Failed to upload");
+        console.error("fail to call upload");
+      }
+    },
+    dataType : "json"
+  });
+};
+
+function getHighestScore(callback) {
+  $.ajax({
+    type : "get",
+    url : "/score/getHighest",
+    async : false,
+    success : function(data) {
+      if (data) {
+        if (data.success) {
+          console.info("get highest score success");
+          callback(data.result.score);
+        } else {
+          console.warn("get highest score failure with code = " + data.errorMessage);
+        }
+      } else {
+        console.error("fail to call getHighest");
       }
     },
     dataType : "json"

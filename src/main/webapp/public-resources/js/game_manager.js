@@ -1,11 +1,33 @@
 function GameManager(size, InputManager, Actuator, StorageManager, uploadScore) {
   this.size = size; // Size of the grid
   this.inputManager = new InputManager;
-  this.storageManager = new StorageManager;
+  var storageManager = new StorageManager;
+  this.storageManager = storageManager;
   this.actuator = new Actuator;
   this.uploadScoreFlag = false;
   this.uploadScore = uploadScore;
-
+  
+  this.storageManager.clearGameState();
+  
+  $.ajax({
+    type : "get",
+    url : "/score/getHighest",
+    async : false,
+    success : function(data) {
+      if (data) {
+        if (data.success) {
+          console.info("get highest score success = " + data.result.score);
+          storageManager.setBestScore(data.result.score);
+        } else {
+          console.warn("get highest score failure with code = " + data.errorMessage);
+        }
+      } else {
+        console.error("fail to call getHighest");
+      }
+    },
+    dataType : "json"
+  });
+  
   this.startTiles = 2;
 
   this.inputManager.on("move", this.move.bind(this));
@@ -17,6 +39,8 @@ function GameManager(size, InputManager, Actuator, StorageManager, uploadScore) 
 
 // Restart the game
 GameManager.prototype.restart = function() {
+  console.info("restart");
+  this.uploadScoreFlag = false;
   this.storageManager.clearGameState();
   this.actuator.continueGame(); // Clear the game won/lost message
   this.setup();

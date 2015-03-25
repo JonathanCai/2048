@@ -16,7 +16,7 @@ import spring2048.web.dto.UserScoreDTO;
 public class UserServiceImpl implements UserService {
 
   // public static void main(String[] args) {
-  // System.out.println(DigestUtils.md5Hex("Test").substring(0, 20));
+  // System.out.println(DigestUtils.md5Hex("ben").substring(0, 20));
   // }
 
   @Autowired

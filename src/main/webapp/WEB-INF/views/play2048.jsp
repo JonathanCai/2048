@@ -123,6 +123,5 @@
   <script src="/public-resources/js/local_storage_manager.js"></script>
   <script src="/public-resources/js/game_manager.js"></script>
   <script src="/public-resources/js/application.js"></script>
-  <script src="/public-resources/js/play2048.js"></script>
 </body>
 </html>
