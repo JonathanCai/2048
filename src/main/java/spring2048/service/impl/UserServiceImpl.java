@@ -25,15 +25,12 @@ public class UserServiceImpl implements UserService {
   @Override
   public UserScoreDTO signin(String username, String password) {
     UserScoreDTO userDTO = null;
-    UserEntity checking = userDao.retrieveUserByUsername(username);
-    if (checking != null) {
-      UserEntity existing = userDao.retrieveUserByUsernameByPassword(username,
-          DigestUtils.md5Hex(password).substring(0, 20));
-      if (existing != null) {
-        userDTO = new UserScoreDTO();
-        userDTO.setUid(existing.getUser_id());
-        userDTO.setUsername(username);
-      }
+    UserEntity existing = userDao.retrieveUserByUsernameByPassword(username,
+        DigestUtils.md5Hex(password).substring(0, 20));
+    if (existing != null) {
+      userDTO = new UserScoreDTO();
+      userDTO.setUid(existing.getUser_id());
+      userDTO.setUsername(username);
     }
     return userDTO;
   }
@@ -45,7 +42,7 @@ public class UserServiceImpl implements UserService {
     UserEntity user = new UserEntity();
     user.setUsername(username);
     user.setPassword(DigestUtils.md5Hex(password).substring(0, 20));
-    userDao.createUser(user);
+    user = userDao.createUser(user);
     if (user.getUser_id() != null && user.getUser_id() > 0) {
       userDTO = new UserScoreDTO();
       userDTO.setUid(user.getUser_id());
