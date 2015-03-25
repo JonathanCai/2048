@@ -24,7 +24,7 @@ Overall project is built on **Spring**, **Spring MVC**, **Hibernate**, **Maven**
   * For eclipse
     1. place the lombok.jar together with the eclipse.ini
     2. open the eclipse.ini and add `-javaagent:lombok.jar` at the end of the file
-  * For IntellJ
+  * For IntelliJ
     1. add the lombok plugin
   * Add the dependency into the pom.xml
 2. Import as a maven project
@@ -34,8 +34,12 @@ Overall project is built on **Spring**, **Spring MVC**, **Hibernate**, **Maven**
 ## Memory DB
 
 We have 2 users in memory DB right now
-* Username: Cloud   Password: cloud
-* Username: Ben     Password: ben
+* User 1
+  * Username: Cloud
+  * Password: cloud
+* User 2
+  * Username: Ben
+  * Password: ben
 
 Details please refer to [schema.sql](src/main/resources/spring2048/sql/schema.sql) and [data.sql](src/main/resources/spring2048/sql/data.sql)
 
