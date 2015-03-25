@@ -6,6 +6,8 @@ A place to learn Spring+2048!
 
 Which provides basic login and register processes, score viewing process.
 
+Overall project is built on **Spring**, **Spring MVC**, **Hibernate**, **Maven** and right here on **Github**, hence the following requirements are for your references.
+
 ## Requirements
 
 * Java7+
