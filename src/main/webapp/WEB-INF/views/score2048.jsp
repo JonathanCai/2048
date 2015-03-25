@@ -19,7 +19,7 @@
     <div class="container">
       <p class="navbar-text width100percent">
         <span class="pull-right">
-          <a href="/play2048" class="navbar-link">Back to Play</a>
+          <a href="/play2048" class="navbar-link">Back to Play!</a>
         </span>
       </p>
     </div>

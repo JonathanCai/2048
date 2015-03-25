@@ -38,7 +38,7 @@
 			</form>
 		</div>
 		<footer class="center">
-			<section id="copyright">Create by Shallong</section>
+			<section id="copyright">2015</section>
 		</footer>
 	</div>
 
