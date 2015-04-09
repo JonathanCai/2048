@@ -14,9 +14,6 @@ import lombok.NoArgsConstructor;
 
 /**
  * User Entity
- * 
- * @author Shallong
- *
  */
 @SuppressWarnings("serial")
 @Entity(name = "user")

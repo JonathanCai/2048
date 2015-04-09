@@ -13,9 +13,6 @@ import lombok.RequiredArgsConstructor;
  * errorMessage: any info or error message that needs to be transferred to the user
  * 
  * result: holds the real content
- * 
- * @author Shallong
- *
  */
 @Data
 @RequiredArgsConstructor

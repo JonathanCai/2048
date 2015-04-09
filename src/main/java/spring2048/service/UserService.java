@@ -4,9 +4,6 @@ import spring2048.web.dto.UserScoreDTO;
 
 /**
  * User service interface
- * 
- * @author Shallong
- *
  */
 public interface UserService {
 

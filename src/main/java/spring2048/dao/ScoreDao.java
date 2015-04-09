@@ -6,9 +6,6 @@ import spring2048.entity.ScoreEntity;
 
 /**
  * Score DAO interface
- * 
- * @author Shallong
- *
  */
 public interface ScoreDao {
 

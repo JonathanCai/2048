@@ -19,9 +19,6 @@ import spring2048.web.dto.UserScoreDTO;
 
 /**
  * Score controller for the score-related logic
- * 
- * @author Shallong
- *
  */
 @Controller
 @RequestMapping(value = "/score")

@@ -10,9 +10,6 @@ import lombok.NoArgsConstructor;
  * User data transfer object
  * 
  * Actually, VO is more meaningful
- * 
- * @author Shallong
- *
  */
 @Data
 @NoArgsConstructor

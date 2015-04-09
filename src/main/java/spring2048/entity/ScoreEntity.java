@@ -15,9 +15,6 @@ import lombok.NoArgsConstructor;
 
 /**
  * Score Entity
- * 
- * @author Shallong
- *
  */
 @SuppressWarnings("serial")
 @Entity(name = "score")

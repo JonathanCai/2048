@@ -42,7 +42,7 @@
 			</form>
 		</div>
 		<footer class="center">
-			<section id="copyright">2015</section>
+			<section id="copyright">Spring2048</section>
 		</footer>
 	</div>
 

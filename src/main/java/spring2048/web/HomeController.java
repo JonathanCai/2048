@@ -10,9 +10,6 @@ import spring2048.web.dto.UserScoreDTO;
 
 /**
  * Entrance controller for the index and basic redirect
- * 
- * @author Shallong
- *
  */
 @Controller
 public class HomeController {

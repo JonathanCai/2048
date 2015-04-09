@@ -4,9 +4,6 @@ import spring2048.entity.UserEntity;
 
 /**
  * User DAO interface
- * 
- * @author Shallong
- *
  */
 public interface UserDao {
 

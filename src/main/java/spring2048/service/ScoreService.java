@@ -7,9 +7,6 @@ import spring2048.web.dto.UserScoreDTO;
 
 /**
  * Score service interface
- * 
- * @author Shallong
- *
  */
 public interface ScoreService {
 

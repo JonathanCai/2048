@@ -14,9 +14,6 @@ import spring2048.web.dto.UserScoreDTO;
 
 /**
  * User controller for user-related logic
- * 
- * @author Shallong
- *
  */
 @Controller
 @RequestMapping(value = "/user")
